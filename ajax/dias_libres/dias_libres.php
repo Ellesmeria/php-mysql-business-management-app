@@ -22,17 +22,17 @@ $filas = $res->fetchAll(PDO::FETCH_ASSOC);
 <div class='dias_libres'>
 <div class="dias_libres_ventana">
   <button class="dias_libres_boton_cerrar">
-    <img src="../../img/cerrar.png" alt="Cerrar">
+    <img src="../img/cerrar.png" alt="Cerrar">
   </button>
   <div class="dias_libres_header">
-    <h2><img src="../../img/calendario_grande.png" alt=""><span>Dias libres de <?= $trabajador['nombre'] ?? 'Trabajador'?></span></h2>
-    <button class="dias_libres_header_boton_anadir"><img src="../../img/nuevo.png" alt=""><span>Añadir ausencia</span></button>
+    <h2><img src="../img/calendario_grande.png" alt=""><span>Dias libres de <?= $trabajador['nombre'] ?? 'Trabajador'?></span></h2>
+    <button class="dias_libres_header_boton_anadir"><img src="../img/nuevo.png" alt=""><span>Añadir ausencia</span></button>
   </div>
   <div class="dias_libres_anadir inactivo">
     <form action="" class="dias_libres_anadir_form">
       <div>
         <div class="dias_libres_anadir_form_header">
-          <img src="../../img/calendario_plus.png" alt="">
+          <img src="../img/calendario_plus.png" alt="">
           <div>
             <h4>Añadir nuevo dias libres</h4>
             <span>Completa los datos</span>
@@ -91,8 +91,8 @@ $filas = $res->fetchAll(PDO::FETCH_ASSOC);
         <td class="dias_libres_tabla_motivo"><?= $fila['motivo'] ?></td>
         <td>
           <div class ="dias_libres_tabla_acciones">
-            <button type="button" class="dias_libres_tabla_eliminar" value="<?= $fila['id_ausencia'] ?>" data-id-ausencia = "<?= $fila['id_ausencia'] ?>"><img src="../../img/borrar.png" alt="Eliminar"></button>
-            <button type="button" class="dias_libres_tabla_cambiar" value="<?= $fila['id_ausencia'] ?>" data-id-ausencia = "<?= $fila['id_ausencia'] ?>"><img src="../../img/cambiar.png" alt="Cambiar"></button>
+            <button type="button" class="dias_libres_tabla_eliminar" value="<?= $fila['id_ausencia'] ?>" data-id-ausencia = "<?= $fila['id_ausencia'] ?>"><img src="../img/borrar.png" alt="Eliminar"></button>
+            <button type="button" class="dias_libres_tabla_cambiar" value="<?= $fila['id_ausencia'] ?>" data-id-ausencia = "<?= $fila['id_ausencia'] ?>"><img src="../img/cambiar.png" alt="Cambiar"></button>
           </div>
         </td>
       </tr>

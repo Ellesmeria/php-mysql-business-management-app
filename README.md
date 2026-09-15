@@ -1,16 +1,57 @@
 # PHP/MySQL Business Management Application
 
-Internal business management web application developed during a one-month professional internship at Grupo Futuro in Granada, Spain, in 2026.
+[English](#english) · [Español](#español)
 
-> Note: This repository preserves the project in the state in which it was completed during the internship. The source code has not been retrospectively rewritten or modernized for portfolio purposes.
+## Screenshots / Capturas
 
-## Project context
+### Work reports / Partes de trabajo
+![Work reports](docs/screenshots/partes_de_trabajo.png)
 
-The application was developed independently from tasks assigned by my internship mentor. I implemented each task, presented the result to the mentor, and then continued with the next functionality.
+### Employee days off / Días libres de trabajadores
+![Employee days off](docs/screenshots/dias_libres_de_trabajadores.png)
 
-The resulting application was used by the company after the internship.
+### Forum / Foro
+![Forum](docs/screenshots/foro.png)
 
-## Tech stack
+### Login / Inicio de sesión
+![Login](docs/screenshots/inicio.png)
+
+---
+
+<a id="english"></a>
+## English
+
+### About the project
+
+I developed this application during a one-month professional internship at Grupo Futuro in Spain in 2026.
+
+My mentor gave me tasks one by one. I implemented each task independently, showed the result, and then continued with the next one.
+
+The application was created for internal company use and was used by the company after my internship.
+
+> This repository preserves the project in the state in which I completed it during the internship. The source code has not been retrospectively rewritten or modernized for portfolio purposes.
+
+### What is inside
+
+The project includes several sections:
+
+- users
+- employees
+- companies
+- company follow-ups
+- mail records
+- forum
+- agenda
+- services
+- work reports
+- employee days off
+- employee documents
+
+The application allows users to create, view, edit, search and delete different types of records.
+
+Some sections also include document upload and download, PDF generation, advanced search and dynamic updates without reloading the whole page.
+
+### Technologies
 
 - PHP
 - MySQL
@@ -22,113 +63,32 @@ The resulting application was used by the company after the internship.
 - Fetch API
 - Async/Await
 - FormData
-- AJAX-style asynchronous requests
-- DOM manipulation
+- DOM
 - Composer
 - Dompdf
 
-## Main modules
+### Backend and database
 
-The application contains separate sections for internal business operations, including:
+The backend was written in plain PHP without a framework.
 
-- Employees (`trabajadores`)
-- Users (`usuarios`)
-- Companies (`empresas`)
-- Company follow-up records (`seguimientos`)
-- Agenda (`agenda`)
-- Mail records (`correos`)
-- Forum / questions and responses (`foro`)
-- Services (`servicios`)
-- Work reports (`partes_trabajo`)
-- Employee days off (`dias_libres`)
-- Employee document management
+The application works with a MySQL database through PDO. The project contains `SELECT`, `INSERT`, `UPDATE` and `DELETE` queries, including prepared statements.
 
-## Main functionality
+It also includes user login/logout, form processing, validation, file handling and PDF generation.
 
-### Data management
+### JavaScript
 
-The project implements database-backed operations for creating, reading, updating and deleting records across multiple modules.
+JavaScript is used for interface logic and asynchronous requests.
 
-It includes:
-
-- Record creation and editing
-- Record deletion
-- Basic and advanced search
-- Dynamic forms
-- Database queries from PHP
-- PDO prepared statements in multiple database operations
-
-### Asynchronous interface
-
-Several parts of the application communicate with PHP scripts without a full page reload.
-
-The JavaScript code uses:
+In different parts of the project I used:
 
 - `fetch()`
 - `async / await`
 - `FormData`
-- Dynamic DOM updates
+- DOM updates
 
-This approach is used in features such as forms, search, record management, document management, forum interactions and days-off management.
+This made it possible to send and receive data without reloading the whole page.
 
-### User access
-
-The project contains:
-
-- User login
-- Logout
-- User-related data management
-- Authentication logic connected to the MySQL database
-
-### Employee documents
-
-The application includes functionality for:
-
-- Uploading employee documents
-- Viewing document records
-- Renaming document records
-- Deleting documents
-- Downloading stored documents
-
-### Forum
-
-The forum module includes functionality for:
-
-- Adding questions
-- Adding responses/comments
-- Searching
-- Advanced search
-- Viewing additional information dynamically
-- Deleting questions and responses
-
-### Company follow-up
-
-The company module includes follow-up functionality for recording and managing interactions associated with companies and services.
-
-### PDF generation
-
-The application uses Dompdf to generate PDF documents from application data.
-
-PDF-related functionality is present in several sections of the project, including the agenda, employees, mail records, forum and work reports.
-
-## Database
-
-The application was built to work with a MySQL database.
-
-The PHP code contains SQL operations including:
-
-- `SELECT`
-- `INSERT`
-- `UPDATE`
-- `DELETE`
-
-Database access is handled with PDO, including prepared statements in multiple parts of the application.
-
-The original project archive does not include a standalone SQL database dump. The repository is therefore primarily presented as a source-code portfolio project unless the database export is added separately.
-
-## Project structure
-
-The project is organized into functional directories such as:
+### Main folders
 
 ```text
 agenda/
@@ -141,28 +101,111 @@ partes_trabajo/
 servicios/
 trabajadores/
 usuarios/
-vendor/
 ```
 
-The repository also contains shared PHP, JavaScript and CSS files used across the application.
+### Database export
 
-## Dependency
+The original project folder does not contain a separate `.sql` export of the database, so this repository is mainly intended to show the source code and project structure.
 
-The project uses Dompdf through Composer:
+### Author
 
-```json
-"dompdf/dompdf": "^3.1"
-```
-
-## Development approach
-
-The backend was written in vanilla PHP without a PHP framework.
-
-The project combines server-side PHP and MySQL with client-side JavaScript to provide dynamic interaction and asynchronous updates.
-
-## Author
-
-Semen Shchouplov
-
+Semen Shchouplov  
 Full Stack Developer  
-Granada, Spain · Open to relocation
+Spain · Open to relocation
+
+---
+
+<a id="español"></a>
+## Español
+
+### Sobre el proyecto
+
+Desarrollé esta aplicación durante un mes de prácticas profesionales en Grupo Futuro, España, en 2026.
+
+Mi tutor me daba las tareas una por una. Yo realizaba cada tarea de forma independiente, enseñaba el resultado y después continuaba con la siguiente.
+
+La aplicación se creó para uso interno de la empresa y siguió utilizándose después de mis prácticas.
+
+> Este repositorio conserva el proyecto en el estado en el que lo terminé durante las prácticas. El código fuente no ha sido reescrito ni modernizado posteriormente con fines de portfolio.
+
+### Qué incluye
+
+El proyecto tiene varias secciones:
+
+- usuarios
+- trabajadores
+- empresas
+- seguimientos de empresas
+- correos
+- foro
+- agenda
+- servicios
+- partes de trabajo
+- días libres de trabajadores
+- documentos de trabajadores
+
+La aplicación permite crear, consultar, editar, buscar y eliminar diferentes tipos de registros.
+
+En algunas secciones también hay carga y descarga de documentos, generación de PDF, búsqueda avanzada y actualización dinámica de información sin recargar toda la página.
+
+### Tecnologías
+
+- PHP
+- MySQL
+- PDO
+- SQL
+- HTML
+- CSS
+- JavaScript
+- Fetch API
+- Async/Await
+- FormData
+- DOM
+- Composer
+- Dompdf
+
+### Backend y base de datos
+
+El backend está escrito en PHP puro, sin framework.
+
+La aplicación trabaja con una base de datos MySQL mediante PDO. En el proyecto hay consultas `SELECT`, `INSERT`, `UPDATE` y `DELETE`, incluidas consultas preparadas.
+
+También hay inicio y cierre de sesión, procesamiento y validación de formularios, gestión de archivos y generación de PDF.
+
+### JavaScript
+
+JavaScript se utiliza para la lógica de la interfaz y para peticiones asíncronas.
+
+En diferentes partes del proyecto utilicé:
+
+- `fetch()`
+- `async / await`
+- `FormData`
+- actualización del DOM
+
+Esto permite enviar y recibir información sin recargar completamente la página.
+
+### Carpetas principales
+
+```text
+agenda/
+ajax/
+correos/
+dias_libres/
+empresas/
+foro/
+partes_trabajo/
+servicios/
+trabajadores/
+usuarios/
+```
+
+### Exportación de la base de datos
+
+La carpeta original del proyecto no contiene una exportación independiente de la base de datos en formato `.sql`, por lo que este repositorio está pensado principalmente para mostrar el código fuente y la estructura del proyecto.
+
+### Autor
+
+Semen Shchouplov  
+Full Stack Developer  
+España · Disponible para reubicación
