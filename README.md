@@ -103,9 +103,11 @@ trabajadores/
 usuarios/
 ```
 
-### Database export
+### Database
 
-The original project folder does not contain a separate `.sql` export of the database, so this repository is mainly intended to show the source code and project structure.
+The project includes the MySQL database export used by the application.
+
+The database contains the tables and test data needed for the main modules of the project.
 
 ### Author
 
@@ -200,9 +202,11 @@ trabajadores/
 usuarios/
 ```
 
-### Exportación de la base de datos
+### Base de datos
 
-La carpeta original del proyecto no contiene una exportación independiente de la base de datos en formato `.sql`, por lo que este repositorio está pensado principalmente para mostrar el código fuente y la estructura del proyecto.
+El proyecto incluye la exportación de la base de datos MySQL utilizada por la aplicación.
+
+La base de datos contiene las tablas y los datos de prueba necesarios para los principales módulos del proyecto.
 
 ### Autor
 
